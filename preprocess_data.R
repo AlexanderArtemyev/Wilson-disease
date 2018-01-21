@@ -65,7 +65,7 @@ data
 data = data[ data[,"Target"] !=2, ]
 
 # Вставляем пропущенный пол пациентки
-data[ grepl("Корчагина", data[,"FIO"]), "Sex" ] = 2
+data[ grepl("Женская_Фамилия", data[,"FIO"]), "Sex" ] = 2
 data[,"Sex"]
 
 
