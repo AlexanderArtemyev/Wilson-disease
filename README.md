@@ -4,8 +4,9 @@
 ## Структура проекта
 1. Описание задачи и целей, планирование: [README.md](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/README.md)
 2. Первичная обработка данных: <br>- [preprocess_data.R](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.R) -- кодировка cp1251, исполнялся <br>- [preprocess_data.utf8.R](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.utf8.R) -- скрипт переведён в кодировку UTF-8 для удобства изучения, этот вариант не исполнялся
-2. Форматирование и обогащение данных. Feature engineering: [preprocess_data.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.ipynb)
-3. Первичное изучение данных: [explore_data.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/explore_data.ipynb)
+3. Форматирование и обогащение данных. Feature engineering: [preprocess_data.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.ipynb)
+4. Первичное изучение данных: [explore_data.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/explore_data.ipynb)
+5. Оценка риска осложнений и вклада генетических факторов. [Predict_LogRegression.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/Predict_LogRegression.ipynb)
 
 ## План проекта
 1. Описать цели, задачи, предметную область - сделано 2018-01-21.
