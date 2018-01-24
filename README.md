@@ -2,7 +2,7 @@
 # Прогноз неврологических проявлений при болезни Вильсона-Коновалова
 
 ## Структура проекта - что сейчас сделано
-1. Описание задачи и целей, планирование: [README.md](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/README.md)
+1. Описание задачи, целей и планов: [README.md](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/README.md)
 2. Первичная обработка данных: <br>- [preprocess_data.R](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.R) -- кодировка cp1251, исполнялся <br>- [preprocess_data.utf8.R](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.utf8.R) -- скрипт переведён в кодировку UTF-8 для удобства изучения, этот вариант не исполнялся
 3. Форматирование и обогащение данных. Feature engineering: [preprocess_data.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.ipynb)
 4. Первичное изучение данных: [explore_data.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/explore_data.ipynb)
