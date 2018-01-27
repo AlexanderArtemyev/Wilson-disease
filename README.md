@@ -6,7 +6,7 @@
 2. Первичная обработка данных: <br>- [preprocess_data.R](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.R) -- кодировка cp1251, исполнялся <br>- [preprocess_data.utf8.R](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.utf8.R) -- скрипт переведён в кодировку UTF-8 для удобства изучения, этот вариант не исполнялся
 3. Форматирование и обогащение данных. Feature engineering: [preprocess_data.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.ipynb)
 4. Первичное изучение данных: [explore_data.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/explore_data.ipynb)
-5. Оценка риска осложнений и вклада генетических факторов. [Predict_LogisticRegression.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/Predict_LogisticRegression.ipynb)
+5. Оценка риска осложнений, важности признаков, влияние генетических факторов риска на качество предсказаний (ROC AUC). [Predict_LogisticRegression.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/Predict_LogisticRegression.ipynb) Выводы в конце.
 
 ## Что планируем делать в проекте
 1. Описать цели, задачи, предметную область - сделано 2018-01-21.
