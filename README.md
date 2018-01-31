@@ -2,31 +2,30 @@
 # Прогноз неврологических проявлений при болезни Вильсона-Коновалова
 
 ## Структура проекта - что сделано
-1. Описание задачи, целей и планов: [README.md](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/README.md)
-2. Первичная обработка данных: <br>- [preprocess_data.R](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.R) -- кодировка cp1251, исполнялся в RStudio / Windows <br>- [preprocess_data.utf8.R](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.utf8.R) -- скрипт переведён в кодировку UTF-8 для удобства изучения, этот вариант не исполнялся
-3. Форматирование и обогащение данных. Feature engineering: [preprocess_data.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.ipynb)
+1. Описание задачи, предметной области, целей и планов: [README.md](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/README.md)
+2. Первичная обработка и очистка данных: <br>- [preprocess_data.R](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.R) -- кодировка cp1251, исполнялся в RStudio / Windows <br>- [preprocess_data.utf8.R](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.utf8.R) -- скрипт переведён в кодировку UTF-8 для удобства изучения, этот вариант не исполнялся
+3. Изучение формата данных. Создание производных признаков: [preprocess_data.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/preprocess_data.ipynb)
 4. Первичное изучение данных: [explore_data.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/explore_data.ipynb)
-5. Оценка риска осложнений, важности признаков, влияние генетических факторов риска на качество предсказаний (ROC AUC). [Predict_LogisticRegression.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/Predict_LogisticRegression.ipynb). Выводы в конце.
+5. Оценка риска осложнений, важности признаков, влияние генетических факторов риска на качество предсказаний (ROC AUC). [Predict_LogisticRegression.ipynb](https://github.com/AlexanderArtemyev/Wilson-disease/blob/master/Predict_LogisticRegression.ipynb). Кластеризация. Выводы в конце.
 
 ## Что планируем делать
 
 ### Ближайшее
-0. Описать цели, задачи, предметную область - сделано 2018-01-21.
-1. Изучить и обсудить структуру данных, результаты первичого изучения, корреляции, аномалии - возможно, исправить в данных опечатки.
-2. Изучить структуру данных. Создать новые признаки для результатов генетических анализов.
-    * Первичное изучение - explorative data analysis - сделано 2018-01-24. <br> Обсудить возможные опечатки в данных.
-3. Рефакторинг:
+1. Обсудить формат и структуру данных, содержание признаков. 
+2. Рефакторинг:
     * выделить общие для всего проекта объекты и функции -- в отдельные файлы -- и импортировать их [stackoverflow](https://stackoverflow.com/questions/21034373/how-to-load-edit-run-save-text-files-py-into-an-ipython-notebook-cell) -- **to do next** 
     * отделить первичную подготовку данных от исследований; структурировать исследования в виде независимых вычислительных "экспериментрв"; оформить повторяющиеся вычисления в виде функций.
-4. Признаки
+3. Сделать рассчёты в соответствии с логикой презентации данных.
+4. Обсудить результаты первичого изучения. Осудить аномалии, исправить в данных опечатки. 
+    * Первичное изучение - explorative data analysis. <br> Обсудить возможные опечатки в данных.
+5. Признаки
     1. Генетические признаки.
-    * Попробовать шкалу 0, 1, 2 для всех признаков.
-    * Масштабировать комбинированные признаки активности генов свертывающей и противосвертывающей систем.
-    * Попробовать один из признаков тяжести цирроза: 'Cirrhosis', 'ChildPugh', 'Advanced'. 
-    * Из признаков рост, вес, BMI оставить один: BMI.
-    * Оптимизация стабильности предсказания: <br> Снижение размерности модели путём исключения сильно скоррелированных 
-5. Кластеризация -- сделано 2018-01-31.
-6. Классфикаторы: линейная логистическая регрессия (слделано), RandomForestClassifier, Yandex CatBoost. <br> Выявление важных групп. 
+        * Попробовать шкалу 0, 1, 2 для всех признаков.
+        * Масштабировать комбинированные признаки активности генов свертывающей и противосвертывающей систем.
+        * Попробовать один из признаков тяжести цирроза: 'Cirrhosis', 'ChildPugh', 'Advanced'. 
+        * Из признаков рост, вес, BMI оставить один: BMI.
+        * Оптимизация стабильности предсказания: <br> Снижение размерности модели путём исключения сильно скоррелированных 
+6. Классфикаторы: линейная логистическая регрессия (слделано), <br> Добавить RandomForestClassifier, Yandex CatBoost. <br> Выявление важных групп. 
 7. Сравнить качество предсказания с генетическими признаками и без них. <br> Выяснить, насколько особенности генов (минорные аллели), регулирующих свёртывающую систему крови, <br> позволяют уточнить прогноз тяжести неврологических проявлений при болезни Вильсона-Коновалова (БВК).
 8. Оценка доверительных интервалов: bootsrtap.
 
