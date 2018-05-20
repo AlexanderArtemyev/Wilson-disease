@@ -185,7 +185,6 @@ write.table( data[,names_cleaned],
 #)
 
 
-warnings()
 write.table( data[,names_anonymized], 
              file = paste(csv_dir, paste("Wilson_anonym.", "csv", sep=""),sep="/"), 
              col.names = TRUE, row.names = FALSE, fileEncoding="CP1251", 
